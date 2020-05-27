@@ -1,0 +1,19 @@
+{
+    "name": "react-native-heytea-allpay",
+    "version": "1.0.0",
+    "description": "allpay react-native plug",
+    "main": "src/index",
+    "scripts": {
+      "test": "echo 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/heytea/react-native-heytea-allpay.git"
+    },
+    "keywords": [
+      "allpay",
+      "react-native"
+    ],
+    "author": "heytea",
+    "license": "MIT"
+  }
