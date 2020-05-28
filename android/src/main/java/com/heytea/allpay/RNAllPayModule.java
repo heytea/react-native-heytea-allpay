@@ -37,7 +37,7 @@ import java.util.Map;
  */
 public class RNAllPayModule extends ReactContextBaseJavaModule {
     private static final  String MODULE_NAME = "AllPay";
-    public static final String ACTION_PAYMENT_RESPONSE = "com.heytea.PAYMENT_RESPONSE";
+    public static final String ACTION_ALLPAY_PAYMENT_RESPONSE = "com.heytea.ALLPAY_PAYMENT_RESPONSE";
     private final String TAG = "RNAllPayModule";
     private  Promise mPromise;
     private ReactContext mContext;
@@ -47,7 +47,7 @@ public class RNAllPayModule extends ReactContextBaseJavaModule {
         this.mContext = reactContext;
         PaymentBroadCastReceiver receiver = new  PaymentBroadCastReceiver();
         IntentFilter filter = new IntentFilter();
-        filter.addAction(ACTION_PAYMENT_RESPONSE);
+        filter.addAction(ACTION_ALLPAY_PAYMENT_RESPONSE);
         this.mContext.registerReceiver(receiver, filter);
     }
 
