@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.dependency 'AlipaySDK-iOS', '15.5.9'
   s.requires_arc = true
   s.frameworks = 'Security','CoreTelephony','SystemConfiguration'
-  s.library = 'libc++','libz','libsqlite3'
+  s.library = 'c++','z','sqlite3'
 end
