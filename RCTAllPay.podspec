@@ -14,8 +14,6 @@ Pod::Spec.new do |s|
   s.source_files = "ios/**/*.{h,m}"
   s.dependency "React"
   s.vendored_libraries = 'ios/RCTAllPay/vendor/libAllPaySDK.a', 'ios/RCTAllPay/vendor/libAppleModule.a', 'ios/RCTAllPay/vendor/libUPModule.a'
-  s.dependency 'WechatOpenSDK', '1.8.3'
-  s.dependency 'AlipaySDK-iOS', '15.5.9'
   s.requires_arc = true
   s.frameworks = 'Security', 'CoreTelephony', 'SystemConfiguration'
   s.library = 'c++','z','sqlite3'
