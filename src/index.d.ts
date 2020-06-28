@@ -1,4 +1,4 @@
-declare module "@heytea/react-native-heytea-allpay" {
+declare module "@heytea/react-native-allpay" {
     export interface IAllPayParam {
         tn:string;
         scheme:string;
