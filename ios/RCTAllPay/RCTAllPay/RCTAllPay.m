@@ -13,6 +13,8 @@
 
 @implementation RCTAllPay
 
+RCT_EXPORT_MODULE(AllPay);
+
 - (dispatch_queue_t)methodQueue {
     return dispatch_get_main_queue();
 }
@@ -36,7 +38,7 @@ RCT_EXPORT_METHOD(pay:(NSDictionary *)data:(RCTResponseSenderBlock)callback) {
       
   NSString *tn = [paramDict objectForKey:@"tn"];
   NSString *scheme = [paramDict objectForKey:@"scheme"];
-  NSNumber  *mode = [paramDict objectForKey:@"mode"]; //测试环境为NO，生产环境为YES
+  NSNumber  *mode = @([[paramDict objectForKey:@"mode"] intValue]); //测试环境为NO，生产环境为YES
   [AllPaySDK pay:tn mode:[mode boolValue] scheme:scheme ViewController:[UIViewController allPayGetCurrentVC] onResult:onResult];
   
 }
