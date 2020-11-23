@@ -9,7 +9,7 @@ export const allPay = (param) => {
         resolve(res)
       })
     } else {
-      AllPay.pay(param).then((res) => {
+      AllPay.allPay(param).then((res) => {
         resolve(res)
       })
     }

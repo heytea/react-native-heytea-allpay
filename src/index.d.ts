@@ -1,8 +1,8 @@
 declare module "@heytea/react-native-allpay" {
     export interface IAllPayParam {
-        tn:string;
-        scheme:string;
-        mode:boolean
+        tn: string;
+        scheme: string;
+        mode: string;
     }
 
     export interface IAllPayResponse {
