@@ -1,6 +1,6 @@
 {
     "name": "@heytea/react-native-allpay",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "allpay react-native plug",
     "main": "src/index",
     "files": [

@@ -1,3 +1,10 @@
+/*
+ * @Company: heytea
+ * @Description: 
+ * @Author: 程广
+ * @Date: 2020-11-20 15:13:57
+ * @LastEditTime: 2020-12-02 09:50:57
+ */
 package com.heytea.allpay;
 
 import android.app.ProgressDialog;
@@ -64,9 +71,10 @@ public class RNAllPayModule extends ReactContextBaseJavaModule {
             @Override
             public void run() {
                 String tn = params.getString("tn");
+                String mode = params.getString("mode");
                 if (!TextUtils.isEmpty(tn)) {
                     Log.i(TAG, "tn=" + tn);
-                    AllPayEngine.pay(getCurrentActivity(), tn, false);
+                    AllPayEngine.pay(getCurrentActivity(), tn, TextUtils.equals(mode,"1"));
                 } else {
                    getCurrentActivity().runOnUiThread(new Runnable() {
                         public void run() {
