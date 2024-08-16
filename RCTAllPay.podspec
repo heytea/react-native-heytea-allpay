@@ -13,9 +13,10 @@ Pod::Spec.new do |s|
   s.source       = { :git => package["repository"]["url"], :tag => "#{s.version}" }
   s.source_files = "ios/**/*.{h,m}"
   s.dependency "React"
-  s.vendored_libraries = 'ios/RCTAllPay/vendor/libAllPaySDK.a', 'ios/RCTAllPay/vendor/libAppleModule.a', 'ios/RCTAllPay/vendor/libUPModule.a'
-  
+  s.vendored_libraries = 'ios/RCTAllPay/vendor/libAllPaySDK.a', 'ios/RCTAllPay/vendor/libAppleModule.a', 'ios/RCTAllPay/vendor/libUPModule.a','ios/RCTAllPay/vendor/libWXModule.a','ios/RCTAllPay/vendor/libAliModule.a'
+  s.vendored_frameworks = 'ios/RCTAllPay/vendor/AlipaySDK.framework', 'ios/RCTAllPay/vendor/AlipayPlusClient.framework'
   s.requires_arc = true
   s.frameworks = 'Security', 'CoreTelephony', 'SystemConfiguration'
   s.library = 'c++','z','sqlite3'
+  s.resources = 'ios/RCTAllPay/vendor/AlipaySDK.bundle'
 end
