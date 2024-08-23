@@ -1,6 +1,6 @@
 /*
  * @Company: heytea
- * @Description: 
+ * @Description:
  * @Author: 程广
  * @Date: 2020-11-20 15:13:57
  * @LastEditTime: 2020-12-02 09:50:57
@@ -55,7 +55,11 @@ public class RNAllPayModule extends ReactContextBaseJavaModule {
         PaymentBroadCastReceiver receiver = new  PaymentBroadCastReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(ACTION_ALLPAY_PAYMENT_RESPONSE);
-        this.mContext.registerReceiver(receiver, filter);
+        if (Build.VERSION.SDK_INT >= 33 && reactContext.getApplicationInfo().targetSdkVersion >= 33) {
+            mContext.registerReceiver(receiver, filter, Context.RECEIVER_EXPORTED);
+        } else {
+            mContext.registerReceiver(receiver, filter);
+        }
     }
 
     @NonNull
